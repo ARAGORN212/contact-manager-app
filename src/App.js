@@ -1,7 +1,8 @@
 import './App.css';
 import { useState } from 'react';
 import Contacts from './components/contact/Contacts';
-import Navbar from './components/Navbar';
+
+import { AddContact, EditContact, ViewContact, Navbar } from './components';
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -10,6 +11,9 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
+      <AddContact />
+      <EditContact />
+      <ViewContact />
       <Contacts contacts={getContact} loading={loading} />
     </div>
   );
