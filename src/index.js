@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,6 +16,14 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
+      <Routes>
+        {/* OUTLET => for nested change router and component */}
+        {/* <Route path='/' element={<App />} >
+          <Route path='/about' element={<App />} />
+          <Route path='/books' element={<App />} />
+        </Route> */}
+
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );

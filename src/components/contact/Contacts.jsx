@@ -3,6 +3,7 @@ import Spinner from "../spinner";
 import Contact from "./Contact";
 
 const Contacts = ({ contacts, loading }) => {
+  // console.log("contacts component"+contacts)
   return (
     <>
       <section className="container">
@@ -26,9 +27,9 @@ const Contacts = ({ contacts, loading }) => {
           <div className="row">
             {/* contacts */}
             {contacts.length > 0 ? (
-              contacts.map((item) => {
-                <Contact key={item.id} contacts={item} />;
-              })
+              contacts?.map((item) => {
+                return <Contact key={item.id} contact={item} />;
+                })
             ) : (
               <div
                 className="text-center py-5"

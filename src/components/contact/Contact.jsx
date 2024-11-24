@@ -1,6 +1,6 @@
 import { CurrentLine, Cyan, Orange, Purple, Red } from "../../helpers/colors";
 
-const Contact = () => {
+const Contact = ({contact}) => {
   return (
     <>
       <div className="col-md-6">
@@ -12,8 +12,8 @@ const Contact = () => {
             <div className="row align-items-center d-flex justify-content-around">
               <div className="col-md-4 col-sm-4">
                 <img
-                  src="https://placehold.co/200"
-                  alt="user-image"
+                  src={contact.image}
+                  alt={contact.fullname}
                   style={{ border: `1ps solid ${Purple}` }}
                   className="img-fluid rounded"
                 />
@@ -22,15 +22,15 @@ const Contact = () => {
                 <ul className="list-group p-0">
                   <li className="list-group-item list-group-item-dark">
                     FirstName, LastName:
-                    <span className="fw-bold"> morizaki ishiga </span>
+                    <span className="fw-bold"> {contact.fullname} </span>
                   </li>
                   <li className="list-group-item list-group-item-dark">
                     Number:
-                    <span className="fw-bold"> 09129876543 </span>
+                    <span className="fw-bold"> {contact.mobile} </span>
                   </li>
                   <li className="list-group-item list-group-item-dark">
                     EmailAddress:
-                    <span className="fw-bold"> morizaki@gmail.com</span>
+                    <span className="fw-bold"> {contact.email}</span>
                   </li>
                 </ul>
               </div>
